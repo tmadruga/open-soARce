@@ -1,0 +1,56 @@
+{
+    "introtocs": {
+           "name": "Hi there!",
+           "bio": "Welcome to the augmented portion of chapter one. Here we’ll be focusing on some of the stories of female pioneers in the world of computing looking into some of the folks who have contributed to the field even before digital computers may have been invented. Let’s get started! :)",
+           "image": "introch1",
+           "source": "",
+           "textNode": true,
+           "webNode": false,
+           "imageNode": false,
+           "scale": 0.0005
+       },
+    "oldComputer": {
+        "name": "Women — The Earliest Computers",
+        "bio": "When we think of computers, we usually think of the laptops that we have in the classroom. However, the very first computers were not digital at all. As mentioned in the textbook, these computers were people who did calculations by hand, using just pencil and paper. Most of these human computers because women could be hired 'more cheaply than men'. Nevertheless, the contributions of these women were incredibly important to the field. Scroll through the webpage to the right to learn about some notable female human computers.",
+        "image": "keyfemalecomputers",
+        "source": "https://tmadruga.wixsite.com/msthesis/ch-1-human-computers",
+        "textNode": true,
+        "webNode": true,
+        "imageNode": false,
+        "scale": 0.0005
+    },
+    "gradcaps": {
+        "name": "Computer Science Grads",
+        "bio": "One of the first two people to get a PhD in computer science in the United States was Mary Kenneth Keller. Sister Mary Kenneth Keller was a nun who also studied Mathematics during her undergraduate career at DePaul University. She helped develop the programming language BASIC.",
+        "image": "ch1grads",
+        "source": "http://www.google.com/gwt/x?u=www.nytimes.com/2019/06/21/technology/gender-gap-tech-computer-science.html",
+        "textNode": true,
+        "webNode": true,
+        "imageNode": true,
+        "scale": 0.0005
+
+    },
+    
+    "programminglanguages": {
+        "name": "Grace Hopper, Inventor of COBOL",
+        "bio": "Admiral Grace Hopper is one of the most well-known people in computer science. She made great contributions to the field, including creating the first language compiler, ultimately creating the programming language COBOL. Because of her additions to Computer Science, the Grace Hopper Conference is named after her to help inspire women to pursue careers in computing.",
+        "image": "ch1grads",
+        "source": "http://www.google.com/gwt/x?u=www.biography.com/scientist/grace-hopper",
+        "textNode": true,
+        "webNode": true,
+        "imageNode": false,
+        "scale": 0.0005
+    },
+    
+    "recursion": {
+        "name": "",
+        "bio": "Recursion although a seemingly simple concept is extremely powerful. An entire discipline of math has emerged from the concept alone, spearheaded by Rozsa Peter. Read more about her to the right.",
+        "image": "ch1grads",
+        "source": "http://www.google.com/gwt/x?u=https://www.sdsc.edu/ScienceWomen/peter.html",
+        "textNode": true,
+        "webNode": true,
+        "imageNode": false,
+        "scale": 0.0005
+    },
+    
+}

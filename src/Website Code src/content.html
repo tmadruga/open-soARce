@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>OpenSoARce</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/Lightbox-Gallery.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/img/icon.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md shadow-sm navigation-clean">
+        <div class="container"><a class="navbar-brand" href="index.html" style="font-family: raleway;">Open SoARce</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">Contribute</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="contact-clean">
+        <form method="post">
+            <h2 class="text-center">Add Content</h2>
+            <form id="recommendationForm">
+          <div class="form-group">
+            <label for="name">Enter a Title</label>
+            <input class="form-control" type="text" id="name" placeholder="Enter Title Text">
+          </div>
+
+          <div class="form-group">
+            <label for="bio">Enter a Description. Limit 140 chararacters.</label>
+            <textarea class="form-control" type="text" id="bio" placeholder="Enter Description Text"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="source">Link</label>
+            <input type="url" class="form-control" id="source" placeholder="Link to the source">
+          </div>
+
+          <div class="form-group">
+            <label for="image">Upload an image that you would like as part of the AR overlay.</label>
+            <input type="file" id="image" accept="image/*">
+          </div>
+
+          <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="textNode">
+          <label class="form-check-label" for="textNode">
+            Show Title
+          </label>
+          </div>
+
+          <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="imageNode">
+          <label class="form-check-label" for="imageNode">
+            Show Image
+          </label>
+          </div>
+
+          <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="webNode">
+          <label class="form-check-label" for="webNode">
+            Show Website
+          </label>
+          </div>
+          <!-- When you click this button, trigger the submit event on this form. -->
+          <!-- <button type="submit" id="file" class="btn btn-primary">Submit</button> -->
+          <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Submit</button><a class="btn btn-primary btn-block" role="button" href="thankyou.html" style="background-color: rgb(90,196,255);">Next</a></div><a class="already" href="#"></a></form>
+
+        </form>
+  </div>
+
+
+    <div class="photo-gallery">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Example Usages</h2>
+                <p class="text-center">Here are some examples of what it would look like to augment your textbook.</p>
+            </div>
+            <div class="row photos">
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-4 item"><a data-lightbox="photos" href="assets/img/1.PNG"><img class="img-fluid" src="assets/img/1.PNG"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-4 item"><a data-lightbox="photos" href="assets/img/2.PNG"><img class="img-fluid" src="assets/img/2.PNG"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-4 item"><a data-lightbox="photos" href="assets/img/3.PNG"><img class="img-fluid" src="assets/img/3.PNG"></a></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+
+<script>
+
+var config = {
+// add config file to your database here
+};
+
+  firebase.initializeApp(config);
+  const ref = firebase.storage().ref();
+  firebase.analytics();
+
+     var data = firebase.database()
+     //Add a new entry to the database, using the input in the form
+     var submitData = function () {
+
+       // Get input values from each of the form elements
+       var name = $("#name").val();
+       var bio = $("#bio").val();
+       var source = $("#source").val();
+       var image = $("#image").val();
+       var imageNode = $("#imageNode").val();
+       var webNode = $("#webNode").val();
+       var textNode = $("#textNode").val();
+
+       // Push a new recommendation to the database using those values
+       data.push({
+         "bio": bio,
+         "image": image,
+         "imageNode": imageNode,
+         "name": name,
+         "source": source,
+         "textNode": textNode,
+         "webNode": webNode
+       });
+     };
+
+     function logSubmit(event) {
+       log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
+       event.preventDefault();
+     }
+     // When the window is fully loaded, call this function.
+     // Note: because we are attaching an event listener to a particular HTML element
+     // in this function, we can't do that until the HTML element in question has
+     // been loaded. Otherwise, we're attaching our listener to nothing, and no code
+     // will run when the submit button is clicked.
+     $(window).on('load', function(){
+
+       // Find the HTML element with the id recommendationForm, and when the submit
+       // event is triggered on that element, call submitRecommendation.
+       $("#recommendationForm").submit(submitData);
+       const form = document.getElementById('recommendationForm');
+       const log = document.getElementById('log');
+       form.addEventListener('submit', logSubmit);
+
+     });
+
+   </script>
+</body>
+
+</html>

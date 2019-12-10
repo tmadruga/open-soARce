@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>OpenSoARce</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/Lightbox-Gallery.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/img/icon.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md shadow-sm navigation-clean">
+        <div class="container"><a class="navbar-brand" href="index.html" style="font-family: raleway;">Open SoARce</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">Contribute</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="register-photo">
+        <div class="form-container">
+            <div class="image-holder" style="background-image: url(&quot;assets/img/trackingimage.PNG&quot;);background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+            <form method="post">
+                <h2 class="text-center"><strong>Upload </strong>Your Tracking Image</h2>
+                <div class="form-group"><label>Images should be clear and easy to be recognized (color, distinct patterns)</label>
+
+                  <form><input id="file" type="file" /></form>
+                <div class="form-group"><label>Image Title Type image title exactly as it appears above.&nbsp;</label><input class="form-control" type="text"></div>
+                <div class="form-group"><label>Image Width (inches, number only)&nbsp;</label><input class="form-control" type="text"></div>
+                <div class="form-group"><label>Image Height (inches, number only)&nbsp;</label><input class="form-control" type="text"></div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Submit</button><a class="btn btn-primary btn-block" role="button" href="content.html" style="background-color: rgb(90,196,255);">Next</a></div><a class="already" href="#"></a></form>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebase/7.5.0/firebase-database.js"></script>
+
+<script>
+
+var config = {
+// add config file to your database here
+};
+
+  firebase.initializeApp(config);
+  const ref = firebase.storage().ref();
+  firebase.analytics();
+
+     document.addEventListener('DOMContentLoaded', function() {
+       var storage = firebase.app().storage().ref();
+       var fileDOM = document.querySelector('#file');
+       fileDOM.addEventListener('change', function () {
+         console.log(this.files);
+         if (!this.files.length) {
+           return;
+         }
+       var file = this.files[0];
+         var reader = new FileReader();
+         reader.onload = function(event) {
+           var binary = event.target.result;
+           var pathName = file.name;
+           var image = storage.child(pathName);
+           console.log({
+             arrayBuffer: binary,
+             blob: new Blob([binary]),
+           });
+           image.put(new Blob([binary])).then(function() {
+             console.log('Uploaded');
+           });
+         }
+         reader.readAsArrayBuffer(file);
+       });
+     });
+
+   </script>
+</body>
+
+</html>
